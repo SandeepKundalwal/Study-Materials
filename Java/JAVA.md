@@ -3,11 +3,14 @@
 ### **1 Is Java Platform Independent. If yes, then how?**
 Java uses **javac compiler** which compiles the program to form a bytecode or `.class` file. This file is platform independent but needs a **JVM (Java Virtual Machine)** for further execution of the bytecode. 
 
+---
 
 ### **2 What is JVM?**  
 JVM stands for Java Virtual Machine. It is a java interpreter. It is reponsible for loadin, verifying, and executing the bytecode created in Java. JVM is platform dependent  because it is a program that runs on a specific OS. Different systems have different architectures, so the JVM needs to be tailored for each one.
 
 ![alt text](image.png)
+
+---
 
 ### **3 Explain JVM Architecture.**  
 JVM acts as a runtime engine to run Java applications. It is the one that acutally calls the main method present in a Java code. JVM is a part of **JRE (Java Reuntime Environment)**.
@@ -40,6 +43,8 @@ When we compile a `.java` file, `.class` file (contains byte-code) with the same
 
 * **Native Method Libraries:** It is a collection of the Native Libraries(C, C++) which are required by the Execution Engine.
 
+---
+
 ### **4 Explain JIT**  
 ![alt text](image-2.png)
 
@@ -50,11 +55,145 @@ JIT stand for **Just-In-Time** compiler.It is a part of JRE. It is used for bett
     - The JIT Compiler is enabled throughout, while it gets activated when a method is invoked. For a compiled method, the JVM directly calls the compiled code, instead of interpreting it.
     - As JVM calls the compiled code, this increases the performance and speed of the execution.
 
+---
+
 ### **5 What is Native Method?** 
 
+---
 
 ### **6 Gargabe Collector**
 
-### **7 Explain JRE**
+---
+
+### **7 Explain JRE**  
+JRE stands for Java Runtime Environment.  It is an installation package that provides an environment to run the Java program on any machine. 
+The JRE combines the Java code by using the JDK with additional built-in code called libraries. It then creates a JVM instance, or local copy, that finally runs the Java programs.
+
+---
+
+### **8 Explain JDK**  
+Hava Development Kit is a collection of software tools that provides the environment to develop and execute Java Programs. JDK is a package that includes two things:
+    - Development Tools to provide an environment to develop Java programs and, JRE to execute Java programs or applications.
+
+---
+
+### **9 What is Java String Pool?**  
+A Java String Pool is a place in heap memory where all the strings defined in the program are stored. A seperate place in a stack is there where the variable storing the string is stored. Whenever we create a new string object, JVM checks for the presence of the object in the String pool. If the string is availbale in the pool, the same object reference is shared with the variable, else a new object is create.
+
+---
+
+### **10 What will happen if we don't declare the main as static?**  
+We can declare the main method without using static and without getting any errors, but the main method will not be treated as the entry poin to the program.
+
+---
+
+### **11 What are packages in Java?**  
+Packages in Java can be defined as the grouping of related types of classes, interfaces, etc providing access to protection and namespace management.
+
+---
+
+### **12 Why Packages are used?**  
+Packages are used in Java in order to prevent naming conflicets, control access, and make searching/locating and usage of classes, interfaces, etc easier.
+
+---
+
+### **13 How many types of Packages are there in Java?**  
+There are two types of packages in Java:  
+- User-Defined packages  
+- Built-in-packages
+
+---
+
+### **14 Explain different data types in Java.**  
+There are 2 types of data types in Java:  
+- Primitive: 
+- Non-Primitive or Object Data Type: Reference Data types will contain a memory address of the variable's values because it is not able to directly store the values in the memory. Types of non-primitive are:
+    - String
+    - Array
+    - Class
+    - Object
+    - Interface
+
+---
+
+### **15 Can we declare Pointer in Java?**  
+ No, Java doesn't provide the support of Pointers.
+
+---
+
+### **16 What is the default value of byte datatype in Java?**  
+The default value of the byte datatype in Java is 0.
+
+---
+
+### **17 What is the default value of float and double datatype in Java?**
+The default value of the float is 0.0f and of double is 0.0d in Java.
+
+---
+
+### **18 What is the Wrapper class in Java?**  
+In Java, wrapper class is an object class that encapsulates the primitive data types.  
+The primitve data types are the ones from which further data types could be created.  
+Java contains 8 wrapper classes. They are Boolean, Byte, Short, Integer, Character, Long, Float, and Double. Furthermore, custom wrapper classes can also be created in Java which is similar to the concept of Structure in the C programming language.
+
+---
+
+### **19 Why do we need wrapper classes?**  
+The wrapper class is an object class that encapsulates the primitive data types, and we need them for the following reasons:  
+- Wrapper classes are final and immutable.
+- Provides methods like valueOf(), parseInt(), etc.
+- It provides the feature of autoboxing and unboxing.
+
+---
+
+### **20 Difference between instance and local variables**  
+| Instance Variable | Local Variable |
+| :---------------- | :------: |
+| declared outside the method, directly invoked by the method        |  declared within the method   |
+| Has a default value           |   No default value   |
+| Can be used throughout the class    |  scope is limited to the method   |
+
+---
+
+### **21 What are the default values assigned to variables and instances in Java?**  
+- The default value for the numeric types(byte, short, int, long, float, and double) is 0.
+- The default value for the boolean type is false.
+- The default value for object types (classes, interfaces, adn arrays) is null.
+- The null character, "u0000" is the default value for the char type.
+
+---
+
+### **22 What is a Class Variable?**  
+In Java, a class variable (also known as a static variable) is a variable that is declared within a class but outside of any method, constructor, or block. Class variables are declared with the static keyword, and thet are shared by all the instances (objects) of the class as well as by the class itself. No matter how many objects are derived from a class, each class vairable would only exist once.
+
+---
+
+### **23 Whar is the default value stored in local variables?**  
+There is no default value stored with local variables. Also, primitive variables and objects don't have any default values.
+
+---
+
+### **24 Explain the difference between instance variable and a class variables.**  
+- Instance Variable: Instance variables are fields declared within a class but outside any method. They are used to store unique data for each instance of the class. Unlike class variables (static variables), which are shared among all instances, instance variables have distincet values specific to each individual object.
+- Class Variable:  A class variable is a variable defined in a class of which a single copy exists, regardless of how many instances of the class exists.
+
+---
+
+### **25 What is a static variable?**  
+The static keyword is used to share the same variable or method of a given class. Static variables are the variables that once declared then a single copy of the variable is created and shared among all objects at the class level.
+
+---
+
+### **26 What is the difference betwwen System.out, Sysyem.err, and Sysyem.in?**  
+
+---
+
+### **27 What do you understand by an I/O stream?**  
+Java I/O streams handle the input and output of data in Java programs. They are implemented as classes in the `java.io` package. Streams can be used to read and write data to files, devices, and other programs.  
+There are two main types of streams in Java:
+- Byte Stream: handle the input and output of raw binary data.
+- Character streams: handle the input and output of character data.
+
+
 
 
